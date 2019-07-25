@@ -14,7 +14,7 @@ class RfDevice(Document):
     brand = StringField(required=True)
     model = StringField(required=True)
     category = StringField(required=True)
-    commands = ObjectIdField(required=True)
+    commands = DynamicField(required=True)
 
 def get_devices():
     devices = []

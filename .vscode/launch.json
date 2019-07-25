@@ -19,7 +19,7 @@
                 "--no-debugger",
                 "--no-reload"
             ],
-            "jinja": true
+            "jinja": false
         }
     ]
 }

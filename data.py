@@ -28,5 +28,5 @@ def get_devices():
     return devices
 
 def get_device_commands(brand, model):
-    device= RfDevice.objects.get(brand=brand,model=model)
+    device = RfDevice.objects.get(brand=brand,model=model)
     return device.commands

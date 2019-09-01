@@ -21,11 +21,19 @@ def models_list():
 def model_rf_commands(brand, model):
     return jsonify(get_device_commands(brand=brand, model=model))
 
+
+# Get security help info
+@app.route('/.well-known/security.txt')
+def security_info():
+    return app.send_static_file('.well-known/security.txt')
+        
+    
 # Get PORT from env.
 PORT = os.getenv("PORT")
 if not PORT:
     PORT = 5000
 else:
     PORT = int(PORT)
+
 if __name__ == '__main__':
     app.run(port=PORT)

@@ -7,12 +7,14 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 * create mongodb database named `ir-commands`.
 * create collection named `commands`.
 * set `DATABASE_URL` env ver with mongo url for example `mongodb://<dbuser>:<dbpassword>@<ip>:<port>/ir-commands`.
+* run it using `python app.py`.
+* in production run is recomended using `gunicorn`.
 
 # technologies
 The Server is Build with Ptyhon, on flask framwork for the HTTP Routing, mongoDB for the data storing.
 
 # purposes
-If you have project that use RF commands for appliances (For exmple, see my great project [casanet](https://github.com/haimkastner/home-iot-server)), worry no more! this project will help with storing and fatching commands on demand.
+If you have project that use RF commands for appliances (For exmple, see my great project [casanet](https://github.com/casanet/casanet-server)), worry no more! this project will help with storing and fatching commands on demand.
 With simple RESTfull API, you will be able the get all the avilable devices in the system, and their known commands.
 
 # stages

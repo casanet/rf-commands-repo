@@ -6,7 +6,7 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 * in project directory press `pip install -r requirements.txt`
 * create MongoDB  database named `ir-commands`.
 * create collection named `commands`.
-* set `DATABASE_URL` env ver with MongoDB URL for example `mongodb://<dbuser>:<dbpassword>@<ip>:<port>/ir-commands`.
+* set `DATABASE_URL` environment variable the MongoDB URL,
 * run it using `python app.py`.
 * in production run is recomended using `gunicorn`.
 

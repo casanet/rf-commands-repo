@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, abort
-from route.rest_common import admin_scope, commands_schema, device_schema, editDevice_schema, app
+from route.rest_common import admin_scope, commands_schema, device_schema, edit_device_schema, app
 from flask_expects_json import expects_json
 from data.devices import edit_device, create_device, delete_device, get_devices
 
@@ -20,9 +20,9 @@ def create_device_route():
 
 @app.route('/device/<brand>/<model>', methods=['PUT'])
 @admin_scope()
-@expects_json(editDevice_schema)
+@expects_json(edit_device_schema)
 def set_device_route(brand: str, model: str):
-    edit_device(brand=brand, model=model, newDevice=request.json)
+    edit_device(brand=brand, model=model, device=request.json)
     resp = jsonify(success=True)
     return resp
 

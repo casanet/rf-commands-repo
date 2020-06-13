@@ -31,7 +31,7 @@ commands_schema = {
     'required': ['commands']
 }
 
-editDevice_schema = {
+edit_device_schema = {
     "type": "object",
     "properties": {
         "brand": {"type": "string"},

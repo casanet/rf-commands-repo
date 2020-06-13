@@ -3,12 +3,13 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 
 # running server
 
-* in project directory press `pip install -r requirements.txt`
-* create MongoDB  database named `ir-commands`.
-* create collection named `commands`.
-* set `DATABASE_URL` environment variable the MongoDB URL,
-* run it using `python app.py`.
-* in production run is recomended using `gunicorn`.
+* To clean current dependencies in the machine uninstall all current system packages `pip uninstall -r requirements.txt -y && pip freeze > requirements.txt`
+* In project directory press `pip install -r requirements.txt`
+* Create MongoDB  database named `ir-commands`.
+* Create collection named `commands`.
+* Set `DATABASE_URL` environment variable the MongoDB URL,
+* Run it using `python app.py`.
+* In production run is recomended using `gunicorn`.
 
 # technologies
 The Server is Build with Python, with the Flask framework for the HTTP Routing, MongoDB for the data storing.

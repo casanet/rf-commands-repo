@@ -1,33 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, abort
 import os
 import settings
-from data import get_devices, get_device_commands
+import route.rf_route
+import route.device_route
+from route.rest_common import app
 
-app = Flask(__name__)
-
-@app.after_request
-def remove_header(response):
-    # Hide server info from possilbe attakers.
-    response.headers['Server'] = ''
-    return response
-
-# Get all supported devices in system
-@app.route('/devices')
-def models_list():
-    return jsonify(get_devices())
-
-# Get RF commands of a devices.
-@app.route('/rf/<brand>/<model>')
-def model_rf_commands(brand, model):
-    return jsonify(get_device_commands(brand=brand, model=model))
-
-
-# Get security help info
-@app.route('/.well-known/security.txt')
-def security_info():
-    return app.send_static_file('.well-known/security.txt')
-        
-    
 # Get PORT from env.
 PORT = os.getenv("PORT")
 if not PORT:

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rf-commands-repo"
+version = "2.0.0"
+description = "Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appliances."
+authors = ["Haim Kastner <haim.kastner@gmail.com>"]
+license = "GPL-3.0"
+
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dotenv = "^0.14.0"
+Flask = "^1.1.2"
+flask-expects-json = "^1.5.0"
+mongoengine = "^0.20.0"
+requests = "^2.24.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

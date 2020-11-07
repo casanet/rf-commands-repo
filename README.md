@@ -3,13 +3,13 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 
 # running server
 
-* To clean current dependencies in the machine uninstall all current system packages `pip uninstall -r requirements.txt -y && pip freeze > requirements.txt`
-* In project directory press `pip install -r requirements.txt`
+* Install the `poetry` dependency tool (if not installed yet) by `pip install --user poetry` for more info see [poetry docs](https://python-poetry.org/docs/)
+* In project directory press `poetry install`
 * Create MongoDB  database named `ir-commands`.
 * Create collection named `commands`.
 * Set `DATABASE_URL` environment variable the MongoDB URL,
-* Run it using `python app.py`.
-* In production run is recomended using `gunicorn`.
+* Run it using `poetry run python src/app.py`.
+* In production run is recommended to install use `gunicorn` see [gunicorn page](https://pypi.org/project/gunicorn/).
 
 # technologies
 The Server is Build with Python, with the Flask framework for the HTTP Routing, MongoDB for the data storing.

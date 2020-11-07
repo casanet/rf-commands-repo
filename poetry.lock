@@ -68,6 +68,20 @@ flask = ">=1.0.2"
 jsonschema = ">=3.0.1"
 
 [[package]]
+name = "gunicorn"
+version = "20.0.4"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.4"
+
+[package.extras]
+eventlet = ["eventlet (>=0.9.7)"]
+gevent = ["gevent (>=0.13)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "idna"
 version = "2.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -224,7 +238,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "90d767fefb2c8ee95fb0f0a82fb89fc87381427f1883260619b2bf6ff4ae123a"
+content-hash = "5f8290f2918e33eeaeae2257134f5a6c884ff5e653207eedbf8e42a8484ce091"
 
 [metadata.files]
 attrs = [
@@ -250,6 +264,10 @@ flask = [
 flask-expects-json = [
     {file = "flask-expects-json-1.5.0.tar.gz", hash = "sha256:0087dc3d089f1ac75a1fc0f259f4dbd02bbb9c356e92e1a080f2309e2f75d053"},
     {file = "flask_expects_json-1.5.0-py3-none-any.whl", hash = "sha256:5aa33f50f7363592a0564fdd9e45b941b45d9683316fd654bd5062bf4b564edb"},
+]
+gunicorn = [
+    {file = "gunicorn-20.0.4-py2.py3-none-any.whl", hash = "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"},
+    {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
 ]
 idna = [
     {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},

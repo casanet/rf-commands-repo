@@ -17,6 +17,7 @@ flask-expects-json = "^1.5.0"
 mongoengine = "^0.20.0"
 requests = "^2.24.0"
 gunicorn = "^20.0.4"
+dnspython = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 

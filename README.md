@@ -9,7 +9,9 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 * Create collection named `commands`.
 * Set `DATABASE_URL` environment variable the MongoDB URL,
 * Run it using `poetry run python src/app.py`.
-* In production run is recommended to install use `gunicorn` see [gunicorn page](https://pypi.org/project/gunicorn/).
+* In production run is recommended to use `gunicorn` see [gunicorn page](https://pypi.org/project/gunicorn/).
+
+* In case of editing the dependencies list, after running the `poetry` command, please run `poetry export -f requirements.txt > requirements.txt` to update the `requirements.txt` for the production deploy.
 
 # technologies
 The Server is Build with Python, with the Flask framework for the HTTP Routing, MongoDB for the data storing.

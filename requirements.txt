@@ -10,6 +10,9 @@ chardet==3.0.4; python_version >= "2.7" and python_full_version < "3.0.0" or pyt
 click==7.1.2; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" \
     --hash=sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc \
     --hash=sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a
+dnspython==2.0.0; python_version >= "3.6" \
+    --hash=sha256:40bb3c24b9d4ec12500f0124288a65df232a3aa749bb0c39734b782873a2544d \
+    --hash=sha256:044af09374469c3a39eeea1a146e8cac27daec951f1f1f157b1962fc7cb9d1b7
 flask-expects-json==1.5.0 \
     --hash=sha256:0087dc3d089f1ac75a1fc0f259f4dbd02bbb9c356e92e1a080f2309e2f75d053 \
     --hash=sha256:5aa33f50f7363592a0564fdd9e45b941b45d9683316fd654bd5062bf4b564edb

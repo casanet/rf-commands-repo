@@ -22,7 +22,7 @@ With simple RESTfull API, you will be able the get all the available devices in 
 
 # data access & manipulation
 Anyone can access the API, but to manipulate the data the request need to authorized by the [remote server](https://github.com/casanet/remote-server) as a valid local user
-by adding an `local_server_key_header` header contains the local server certificate `mac_address:local_server_api_secret_key`.
+by adding an `local_server_key_header` header contains the local server certificate with the folloing string structure `mac_address:local_server_api_secret_key`.
 
 To allow it, set `REMOTE_SERVER_URL` environment variable contained the remote server URL and `RF_REPOSITORY_API_KEY` with same key in the remote server to validate Rf commands validations requests, see [.env.example](./.env.example) for example.
 

@@ -18,7 +18,7 @@ def create_device_route():
     return resp
 
 
-@app.route('/device/<brand>/<model>', methods=['PUT'])
+@app.route('/devices/<brand>/<model>', methods=['PUT'])
 @local_server_scope()
 @expects_json(edit_device_schema)
 def set_device_route(brand: str, model: str):
@@ -27,7 +27,7 @@ def set_device_route(brand: str, model: str):
     return resp
 
 
-@app.route('/device/<brand>/<model>', methods=['DELETE'])
+@app.route('/devices/<brand>/<model>', methods=['DELETE'])
 @local_server_scope()
 def delete_device_route(brand: str, model: str):
     delete_device(brand=brand, model=model)

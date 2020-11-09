@@ -7,4 +7,4 @@
 - Create a new branch and commit changes into it.
 - Open a PR to the `development` branch (not master).
 
-Thank a lot!
+Thanks a lot!

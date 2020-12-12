@@ -7,7 +7,7 @@ Simple, light-weight server for RF commands (such as: IR, 433 MHz etc.) for appl
 * In project directory press `poetry install`
 * Create MongoDB  database named `ir-commands`.
 * Create collection named `commands`.
-* Set the `DATABASE_URL` environment variable the MongoDB URL,
+* Set the `DATABASE_URL` environment variable the MongoDB URL.
 * Run it using `poetry run python src/app.py`.
 * In production run is recommended to use `gunicorn` see [gunicorn page](https://pypi.org/project/gunicorn/).
 
